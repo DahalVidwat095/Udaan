@@ -1,0 +1,102 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Form</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="/home" class="logo"> Udaan </a>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+
+      <form action="/updateform" class="search-form">
+        <input
+          type="text"
+          name="customer_name"
+          value="{{customer.customer_name}}"
+          placeholder=""
+          id="search-box"
+        />
+
+        <input
+        type="text"
+        name="customer_email"
+        value="{{customer.customer_email}}"
+        placeholder=""
+        id="search-box"
+      />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- heading section starts -->
+
+    <section class="heading">
+      <h1>Buying Form</h1>
+    </section>
+
+    <!-- heading section ends-->
+
+    <section class="contact">
+      <div class="row">
+        <form action="/updateform" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <input
+          type="text"
+          name="customer_name"
+          value="{{customers.customer_name}}"
+          placeholder=""
+        />
+
+        <input
+        type="email"
+        name="customer_email"
+        value="{{customers.customer_email}}"
+        placeholder=""
+      />
+
+      <input
+      type="text"
+      name="customer_address"
+      value="{{customers.customer_address}}"
+      placeholder=""
+    />
+
+    <input
+    type="password"
+    name="customer_password"
+    value="{{customers.customer_password}}"
+    placeholder=""
+  />
+          <input
+            type="submit"
+            value="Buy Now"
+            class="btn"
+          />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

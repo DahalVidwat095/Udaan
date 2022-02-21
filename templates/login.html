@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- custom js file link  -->
+  <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+  <!-- header section starts  -->
+
+  <header class="header">
+    <a href="" class="logo"> Udaan </a>
+
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+      <input type="search" name="" placeholder="search here..." id="search-box" />
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- header section  -->
+
+  <section class="heading">
+    <h1>account</h1>
+  </section>
+
+  <!-- header section -->
+
+  <!-- login form section starts -->
+
+  <section class="login-form">
+    <form action="" method="post">
+      {% csrf_token %}
+      <h3>user login</h3>
+      <div class="inputBox">
+        <span class="fas fa-user"></span>
+        <input type="text" name="username" placeholder="enter your username" id="" />
+      </div>
+      <div class="inputBox">
+        <span class="fas fa-lock"></span>
+        <input type="password" name="password" placeholder="enter your password" id="" />
+      </div>
+      <input type="submit" value="sign in" class="btn" />
+      <b>
+        <p>Don't have an account?</p>
+      </b>
+      <a href="/register" class="btn">create an account</a>
+    </form>
+    <a href="/form" class="btn">Login as Admin</a>
+  </section>
+
+  <!-- login form section ends -->
+</body>
+
+</html>

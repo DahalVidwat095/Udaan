@@ -1,0 +1,165 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- custom js file link  -->
+  <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+  <!-- header section starts  -->
+
+  <header class="header">
+    <a href="/home" class="logo"> Udaan </a>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li>
+          <a href="#">Pages +</a>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+          </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+        <li>
+          <a href="#">Account +</a>
+          <ul>
+            <li><a href="/">Logout</a></li>
+            <li><a href="/register">Register</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+      <input type="search" name="" placeholder="search here..." id="search-box" />
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+  </header>
+  <!-- header section ends -->
+
+  <!-- header section  -->
+
+  <section class="heading">
+    <h1>our products</h1>
+    <p><a href="/home">home</a> >> products</p>
+  </section>
+
+  <!-- header section -->
+
+  <!-- prodcuts section starts  -->
+
+  <section class="products">
+    <h1 class="title">featured products</h1>
+
+    <div class="box-container">
+      {% for product in products %}
+      <div class="box">
+        <div class="image">
+          <img src="{{product.product_image.url}}" alt="" />
+        </div>
+        <div class="content">
+          <h3>{{product.product_name}}</h3>
+          <div class="price">{{product.product_price}}</div>
+
+          
+
+          <form action="{% url 'purchaseitem' product.id %}" method="POST">
+            {% csrf_token %}
+            <button style="background-color: coral; width: 120px;" type="submit" class="text-uppercase"> Order!
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {% endfor %}
+      <!-- <div class="box">
+          <div class="image">
+            <img src="{%static "img/product2.jpg" %}" alt="" />
+          </div>
+          <div class="content">
+            <h3>Drone 1</h3>
+            <div class="price">Nrs. 24,000</div>
+            <a href="/blogsform" class="btn2">Buy now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="{%static "img/product3.jpg" %}" alt="" />
+          </div>
+          <div class="content">
+            <h3>Drone 2</h3>
+            <div class="price">Nrs. 44,000</div>
+            <a href="#" class="btn2">Buy now</a>
+          </div> -->
+    </div>
+    </div>
+  </section>
+
+  <!-- prodcuts section ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="/home"> <i class="fas fa-angle-right"></i> home</a>
+        <a href="/products"> <i class="fas fa-angle-right"></i> products</a>
+        <a href="/about"> <i class="fas fa-angle-right"></i> about</a>
+        <a href="/blogs"> <i class="fas fa-angle-right"></i> blogs</a>
+        <a href="/contact"> <i class="fas fa-angle-right"></i> contact</a>
+        <a href="/"> <i class="fas fa-angle-right"></i> login</a>
+        <a href="/register"> <i class="fas fa-angle-right"></i> register</a>
+      </div>
+
+      <div class="box">
+        <h3>extra links</h3>
+        <a href="#"> <i class="fas fa-angle-right"></i> my account </a>
+        <a href="#"> <i class="fas fa-angle-right"></i> my order </a>
+        <a href="#"> <i class="fas fa-angle-right"></i> my wishlist </a>
+        <a href="#"> <i class="fas fa-angle-right"></i> terms of use </a>
+        <a href="#"> <i class="fas fa-angle-right"></i> privacy policy </a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+        <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+        <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+        <a href="#"> <i class="fab fa-github"></i> github </a>
+      </div>
+    </div>
+
+    <div class="credit">
+      created by <span>Vidwat</span> | all rights reserved
+    </div>
+  </section>
+
+  <!-- footer section ends -->
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="/home" class="logo"> Udaan </a>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="/home">home</a></li>
+          <li><a href="/products">products</a></li>
+          <li>
+            <a href="#">pages +</a>
+            <ul>
+              <li><a href="/about">about</a></li>
+              <li><a href="/blogs">blogs</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact">contact</a></li>
+          <li>
+            <a href="#">account +</a>
+            <ul>
+              <li><a href="/">logout</a></li>
+              <li><a href="/register">register</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </header>
+    <!-- header section ends -->
+
+    <!-- heading section starts -->
+
+    <section class="heading">
+      <h1>contact us</h1>
+      <p><a href="/home">home</a> >> contact</p>
+    </section>
+
+    <!-- heading section ends-->
+
+    <!-- contact section starts  -->
+
+    <section class="contact">
+      <h1 class="title">get in touch</h1>
+      <h2>
+        Do you have a pre-sales question? <br />
+        Do you need help with an exisiting order? <br />
+        Are you ready to work with the #1 enterprise & distribution provider of
+        drones in Nepal? <br />
+        <br />
+        Complete the form below and one of our drone experts will contact you
+        within 24 hours.
+      </h2>
+
+      <div class="row">
+        <form action="">
+          <input type="text" placeholder="your name" class="box" />
+          <input type="text" placeholder="your number" class="box" />
+          <input type="email" placeholder="your email" class="box" />
+          <textarea
+            name=""
+            placeholder="your message"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3555432311578!2d85.32788265133975!3d27.706306682707872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c4f53018d1%3A0x2c9602e69b406e27!2sSoftwarica%20College%20-%20Block%20E!5e0!3m2!1sen!2snp!4v1645164382084!5m2!1sen!2snp"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/home"> <i class="fas fa-angle-right"></i> home</a>
+          <a href="/products"> <i class="fas fa-angle-right"></i> products</a>
+          <a href="/about"> <i class="fas fa-angle-right"></i> about</a>
+          <a href="/blogs"> <i class="fas fa-angle-right"></i> blogs</a>
+          <a href="/contact"> <i class="fas fa-angle-right"></i> contact</a>
+          <a href="/"> <i class="fas fa-angle-right"></i> login</a>
+          <a href="/register"> <i class="fas fa-angle-right"></i> register</a>
+        </div>
+
+        <div class="box">
+          <h3>Location</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> Dillibazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bagbazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Pokhara</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Chitwan</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Koteshwor</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bhaktapur</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Butwal</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact Details</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> +977-9880327811</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> 01-5265698</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> udaan@gmail.com</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> info@udaan.com</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Vidwat</span> | all rights reserved
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+  </body>
+</html>

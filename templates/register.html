@@ -1,0 +1,78 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- custom js file link  -->
+  <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+  <!-- header section starts  -->
+
+  <header class="header">
+    <a href="" class="logo"> Udaan </a>
+
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+      <input type="search" name="" placeholder="search here..." id="search-box" />
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- heading section starts  -->
+
+  <section class="heading">
+    <h1>account</h1>
+  </section>
+
+  <!-- heading section ends-->
+
+  <!-- register form section starts -->
+
+  <section class="register-form">
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+      <h3>register now</h3>
+      <div class="inputBox">
+        <span class="fas fa-user"></span>
+        <input type="text" name="username" placeholder="enter your username" id="" />
+      </div>
+      <div class="inputBox">
+        <span class="fas fa-envelope"></span>
+        <input type="email" name="email" placeholder="enter your email" id="" />
+      </div>
+      <div class="inputBox">
+        <span class="fas fa-lock"></span>
+        <input type="password" name="password" placeholder="enter your password" id="" />
+      </div>
+      <div class="inputBox">
+        <span class="fas fa-lock"></span>
+        <input type="password" name="confirm_password" placeholder="confirm your password" id="" />
+      </div>
+      <input type="submit" value="sign up" class="btn" />
+      <a href="/" class="btn">already have an account</a>
+    </form>
+  </section>
+
+  <!-- register form section ends -->
+</body>
+
+</html>

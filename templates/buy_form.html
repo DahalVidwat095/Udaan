@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Form</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="/home" class="logo"> Udaan </a>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- heading section starts -->
+
+    <section class="heading">
+      <h1>Buying Form</h1>
+    </section>
+
+    <!-- heading section ends-->
+
+    <section class="contact">
+      <div class="row">
+        <form action="/bform" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input
+            type="text"
+            value="{{products.product_id}}"
+            name="p_name"
+            class="box"
+          />
+          <input
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            class="box"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            class="box"
+          />
+          <input
+            type="submit"
+            value="Buy Now"
+            class="btn"
+          />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

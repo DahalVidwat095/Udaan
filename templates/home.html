@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="/home" class="logo"> Udaan </a>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li>
+            <a href="#">Pages +</a>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/blogs">Blogs</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="#">Account +</a>
+            <ul>
+              <li><a href="/">Logout</a></li>
+              <li><a href="/register">Register</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts      -->
+
+    <section class="home">
+      <div
+        class="slide active"
+        style="background: url(static/img/hom1.jpg) no-repeat"
+      >
+        <div class="content">
+          <span>Drone</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div class="slide" style="background: url(static/img/home.jpg) no-repeat">
+        <div class="content">
+          <span>Drone</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div
+        class="slide"
+        style="background: url(static/img/home2.jpg) no-repeat"
+      >
+        <div class="content">
+          <span>Drone</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div
+        class="slide"
+        style="background: url(static/img/home3.jpg) no-repeat"
+      >
+        <div class="content">
+          <span>Drone</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div
+        class="slide"
+        style="background: url(static/img/home4.jpg) no-repeat"
+      >
+        <div class="content">
+          <span>Drone</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
+      <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
+    </section>
+
+    <!-- home section ends     -->
+
+    <!-- banner section starts  -->
+
+    <section class="banner">
+      <div class="box">
+        <img src="{%static "img/drone1.png" %}" alt="" />
+        <div class="content">
+          <span>special offer</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{%static "img/drone2.png" %}" alt="" />
+        <div class="content">
+          <span>special offer</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{%static "img/drone3.png" %}" alt="" />
+        <div class="content">
+          <span>special offer</span>
+          <h3>upto 50% off</h3>
+          <a href="/products" class="btn">shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/home"> <i class="fas fa-angle-right"></i> home</a>
+          <a href="/products"> <i class="fas fa-angle-right"></i> products</a>
+          <a href="/about"> <i class="fas fa-angle-right"></i> about</a>
+          <a href="/blogs"> <i class="fas fa-angle-right"></i> blogs</a>
+          <a href="/contact"> <i class="fas fa-angle-right"></i> contact</a>
+          <a href="/"> <i class="fas fa-angle-right"></i> login</a>
+          <a href="/register"> <i class="fas fa-angle-right"></i> register</a>
+        </div>
+
+        <div class="box">
+          <h3>Location</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> Dillibazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bagbazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Pokhara</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Chitwan</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Koteshwor</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bhaktapur</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Butwal</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact Details</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> +977-9880327811</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> 01-5265698</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> udaan@gmail.com</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> info@udaan.com</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Vidwat</span> | all rights reserved
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+  </body>
+</html>

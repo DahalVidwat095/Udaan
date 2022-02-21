@@ -1,0 +1,174 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="/home" class="logo"> Udaan </a>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li>
+            <a href="#">Pages +</a>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/blogs">Blogs</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="#">Account +</a>
+            <ul>
+              <li><a href="/">Logout</a></li>
+              <li><a href="/register">Register</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- header section  -->
+
+    <section class="heading">
+      <h1>About us</h1>
+      <p><a href="/home">Home</a> >> About</p>
+    </section>
+
+    <!-- header section -->
+
+    <!-- about section starts  -->
+
+    <section class="about">
+      <h1 class="title">Why choose us?</h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="{%static "img/about_us.jpg" %}" alt="" />
+        </div>
+
+        <div class="content">
+          <h3>Best Drone Seller in the Town</h3>
+          <p id="about">
+            Udaan specializes in the supply of high-end drones for a variety of
+            commercial, private, and recreational needs. A leading authorized
+            service center, we’re able to deliver the highest quality drones at
+            the highest quality service. Whether you require drones for aerial
+            filming, videography, surveying, or anything else, we have the
+            drones available to suit your needs. With an extensive product range
+            as well as custom drone solutions available, we can help you choose
+            the perfect product or our engineers can design one specifically for
+            you! It’s all this and so much more that we are a leading name in
+            the ever-growing drone industry, renowned as pioneers for our unique
+            drones. Drone Nerds is also the largest distributor of drones in the
+            Nepal, boasting the largest inventory of drones in the nation.
+          </p>
+        </div>
+      </div>
+
+      <div class="icons-container">
+        <div class="icons">
+          <img src="{%static "img/icon-1.png" %}" alt="" />
+          <h3>All sizes</h3>
+        </div>
+
+        <div class="icons">
+          <img src="{%static "img/icon-2.png" %}" alt="" />
+          <h3>Free delivery</h3>
+        </div>
+
+        <div class="icons">
+          <img src="{%static "img/icon-3.png" %}" alt="" />
+          <h3>Easy returns</h3>
+        </div>
+
+        <div class="icons">
+          <img src="{%static "img/icon-4.png" %}" alt="" />
+          <h3>Easy payments</h3>
+        </div>
+
+        <div class="icons">
+          <img src="{%static "img/icon-5.png" %}" alt="" />
+          <h3>24/7 support</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="/home"> <i class="fas fa-angle-right"></i> home</a>
+          <a href="/products"> <i class="fas fa-angle-right"></i> products</a>
+          <a href="/about"> <i class="fas fa-angle-right"></i> about</a>
+          <a href="/blogs"> <i class="fas fa-angle-right"></i> blogs</a>
+          <a href="/contact"> <i class="fas fa-angle-right"></i> contact</a>
+          <a href="/"> <i class="fas fa-angle-right"></i> login</a>
+          <a href="/register"> <i class="fas fa-angle-right"></i> register</a>
+        </div>
+
+        <div class="box">
+          <h3>Location</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> Dillibazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bagbazar</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Pokhara</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Chitwan</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Koteshwor</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Bhaktapur</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Butwal</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact Details</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> +977-9880327811</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> 01-5265698</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> udaan@gmail.com</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> info@udaan.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+  </body>
+</html>

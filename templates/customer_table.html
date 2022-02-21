@@ -1,0 +1,138 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Udaan Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/catering_orders.css' %}" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+
+        <div class="logo_name">Udaan</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="admin_home.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Add Products</span>
+          </a>
+          <span class="tooltip">Add Product</span>
+        </li>
+        <li>
+          <a href="foods.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Foods</span>
+          </a>
+          <span class="tooltip">Foods</span>
+        </li>
+        <li>
+          <a href="customers.html" >
+            <i class="bx bx-user"></i>
+            <span class="links_name">Customers</span>
+          </a>
+          <span class="tooltip">Customers</span>
+        </li>
+        <li>
+          <a href="messages.html">
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li>
+          <a href="orders.html" >
+            <i class="bx bx-cart-alt"></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="caterin_urder.html" class="active">
+            <i class="bx bx-cart"></i>
+            <span class="links_name">Catering Order</span>
+          </a>
+          <span class="tooltip">Catering Order</span>
+        </li>
+
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name">Admin</div>
+              <div class="job">Logout</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="text">Catering Inquiries/Orders</div>
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Orders</div>
+              <div class="number">4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Catering Inquiries/Orders</div>
+            <div class="sales-details">
+              <table>
+                <thead>
+                  <th>No.</th>
+                  <th>Customer's Name</th>
+                  <th>Customer's Email</th>
+                  <th>Orders</th>
+                  <th>How Much</th>
+                  <th>Address</th>
+                  <th>Pick Up Time</th>
+                  <th>More Details</th>
+                  <th>action</th>
+                </thead>
+
+                <tbody>
+                  {% for customer in customers %}
+                  <tr>
+                    <td></td>
+                    <td>{{customer.customer_name}}</td>
+                    <td>{{customer.customer_email}}</td>
+                    <td>
+                      <a
+                        href="#"
+                        class="delete-btn"
+                        onclick="return confirm('are your sure you want to delete this?');"
+                      >
+                        <i class="fas fa-trash"></i> delete
+                      </a>
+                      <a href="/cupdate/{{customer.customer_id}}" class="option-btn">
+                        <i class="fas fa-edit"></i> update
+                      </a>
+                    </td>
+                  </tr>
+                  {%endfor%}
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'js/admin.js' %}" defer></script>
+  </body>
+</html>
